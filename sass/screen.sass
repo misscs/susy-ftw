@@ -1,7 +1,114 @@
-/*
-  Welcome to Compass.
-  In this file you should write your main styles. (or centralize your imports)
-  Import this file using the following HTML or equivalent:
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+// ---------------------------------------------------------------------------
+// Imports
 
-@import compass/reset
+@import base
+@import partials/vars
+@import partials/solarized
+
+/* -------------------------------------------------------------------------
+/* Vars
+// setting these here for speed and ease. keep things togeter in your partials
+// <style>: magic | static | fluid.
+// magic: Susy's magic grid has a set width, but becomes fluid rather than overflowing the viewport at small sizes.
+// static: Susy's static grid will retain the width defined in your settings at all times.
+// fluid: Susy's fluid grid will always be based on the viewport width. The percentage will be determined by your grid settings, or by $container-width, if either is set using % units. Otherwise it will default to auto (100%).
+
+$container-style: magic
+
+
+/* -------------------------------------------------------------------------
+/* Layout
+
+// pre() add margin before
+// post() add margin after
+// squish() add margin before and after; requires 2 values
+
+// prefix() add padding before
+// suffix () add padding after
+// pad() add padding before and after; requires 2 values
+
+
+body
+  background: $base3
+  color: $base03
+  
+a
+  color: $solar-orange
+  text-decoration: none
+
+.container
+  +container
+  // +susy-grid-background
+
+
+
+h1
+  color: $solar-magenta
+  font-size: 2em
+  +span-columns(8)
+
+h2
+  +span-columns(4 omega)
+  text-align: center
+
+header
+  +span-columns(12)
+  background: $base2  
+  +trailer(1)
+
+section
+  +span-columns(8)
+  // +push(3)
+
+blockquote
+  margin: 0
+  padding: 0
+  margin-left: space(1,8)
+  +trailer(2)
+  border-left: $gutter-width/4 solid $solar-magenta
+  font-size: $twentyfour
+  p
+    +pad(1,1)
+
+blockquote + p
+  width: columns(4, 8)
+  background: $solar-yellow
+  & + p
+    width: columns(2, 8)
+    background: $solar-orange
+    +pre(5,8)
+    & + p
+      background: $solar-green
+      +pre(3,8)
+
+.box
+  background: $base1
+  text-align: center
+  color: $base2
+  min-height: 10em
+  +span-columns(4)
+  +trailer(2)
+  p
+    font-size: $eighteen
+  &:nth-child(3n)
+    +omega
+
+aside
+  +span-columns(4 omega)
+  // +pull(12)
+  ul
+    +no-bullet
+    margin: 0
+    padding: 0
+  li
+    +apply-side-rhythm-border(bottom, 1, 1, $twelve, solid)
+    border-color: $base1
+    +padding-leader(1)
+  
+footer
+  +span-columns(10)
+  +pad(1,1)
+  +leader(3)
+  background: $base03
+  color: $base2
+  

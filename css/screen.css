@@ -1,59 +1,145 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/* non highlighted code colors */
+/* ------------------------------------------------------------------------- */
+/* Vars */
+/* ------------------------------------------------------------------------- */
+/* Layout */
+body {
+  background: #fdf6e3;
+  color: #002b36;
+}
+
+a {
+  color: #cb4b16;
+  text-decoration: none;
+}
+
+.container {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+  color: #d33682;
+  font-size: 2em;
+  width: 66.102%;
+  float: left;
+  margin-right: 1.695%;
+  display: inline;
+}
+
+h2 {
+  width: 32.203%;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  display: inline;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  float: left;
+  margin-right: 1.695%;
+  display: inline;
+  background: #eee8d5;
+  margin-bottom: 1.5em;
+}
+
+section {
+  width: 66.102%;
+  float: left;
+  margin-right: 1.695%;
+  display: inline;
+}
+
+blockquote {
   margin: 0;
   padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
+  margin-left: 12.821%;
+  margin-bottom: 3em;
+  border-left: 0.25em solid #d33682;
+  font-size: 1.5em;
+}
+blockquote p {
+  padding-left: 8.475%;
+  padding-right: 8.475%;
 }
 
-html {
-  line-height: 1;
+blockquote + p {
+  width: 48.718%;
+  background: #b58900;
+}
+blockquote + p + p {
+  width: 23.077%;
+  background: #cb4b16;
+  margin-left: 64.103%;
+}
+blockquote + p + p + p {
+  background: #859900;
+  margin-left: 38.462%;
 }
 
-ol, ul {
-  list-style: none;
+.box {
+  background: #93a1a1;
+  text-align: center;
+  color: #eee8d5;
+  min-height: 10em;
+  width: 32.203%;
+  float: left;
+  margin-right: 1.695%;
+  display: inline;
+  margin-bottom: 3em;
+}
+.box p {
+  font-size: 1.125em;
+}
+.box:nth-child(3n) {
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  display: inline;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+aside {
+  width: 32.203%;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  display: inline;
+}
+aside ul {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  margin: 0;
+  padding: 0;
+}
+aside li {
+  border-bottom-style: solid;
+  border-bottom-width: 1.333;
+  padding-bottom: 30px;
+  border-color: #93a1a1;
+  padding-top: 1.5em;
 }
 
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
+footer {
+  width: 83.051%;
+  float: left;
+  margin-right: 1.695%;
+  display: inline;
+  padding-left: 8.475%;
+  padding-right: 8.475%;
+  margin-top: 4.5em;
+  background: #002b36;
+  color: #eee8d5;
 }
