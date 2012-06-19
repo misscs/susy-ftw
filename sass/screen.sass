@@ -15,6 +15,9 @@
 
 $container-style: magic
 
+// Breakpoint!
+$breakpoint-small: 600px
+
 
 /* -------------------------------------------------------------------------
 /* Layout
@@ -38,18 +41,19 @@ a
 
 .container
   +container
-  // +susy-grid-background
-
-
+  +susy-grid-background
 
 h1
+  text-align: center
   color: $solar-magenta
   font-size: 2em
-  +span-columns(8)
+  +breakpoint($breakpoint-small)
+    +span-columns(8)
 
 h2
-  +span-columns(4 omega)
   text-align: center
+  +breakpoint($breakpoint-small)
+    +span-columns(4 omega)
 
 header
   +span-columns(12)
@@ -57,8 +61,9 @@ header
   +trailer(1)
 
 section
-  +span-columns(8)
-  // +push(3)
+  +breakpoint($breakpoint-small)
+    +span-columns(8)
+    // +push(3)
 
 blockquote
   margin: 0
@@ -85,16 +90,19 @@ blockquote + p
   background: $base1
   text-align: center
   color: $base2
-  min-height: 10em
-  +span-columns(4)
-  +trailer(2)
+  +breakpoint($breakpoint-small)
+    min-height: 10em
+    +span-columns(4)
+    +trailer(2)
+    &:nth-child(3n)
+      +omega
   p
     font-size: $eighteen
-  &:nth-child(3n)
-    +omega
+    padding: 0 2em
 
 aside
-  +span-columns(4 omega)
+  +breakpoint($breakpoint-small)
+    +span-columns(4 omega)
   // +pull(12)
   ul
     +no-bullet
@@ -108,7 +116,7 @@ aside
 footer
   +span-columns(10)
   +pad(1,1)
-  +leader(3)
   background: $base03
   color: $base2
-  
+  +breakpoint($breakpoint-small)
+    +leader(3)
