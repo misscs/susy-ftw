@@ -112,9 +112,8 @@ blockquote + p + p + p {
 
 aside {
   width: 32.203%;
-  float: right;
-  margin-right: 0;
-  #margin-left: -1em;
+  float: left;
+  margin-right: 1.695%;
   display: inline;
 }
 aside ul {
